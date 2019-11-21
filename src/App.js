@@ -26,14 +26,13 @@ class App extends React.Component {
 
         userRef.onSnapshot(snapShot => {
           setCurrentUser({
-            currentUser:{
               id:snapShot.id,
               ...snapShot.data()
-            }
+            
           });
         });
       }
-      setCurrentUser({currentUser : userAuth})
+      setCurrentUser(userAuth)
     });
   }
 
@@ -59,9 +58,7 @@ class App extends React.Component {
               )
             }
           />
-        {
-          console.log(this.props.currentUser , this.props.currentUser === null)
-        }
+        
       </Switch>
     </div>);
 }
