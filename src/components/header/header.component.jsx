@@ -34,9 +34,6 @@ const Header = ({currentUser, hidden}) => (
                 <Link className="option" to='/signin'>SIGN IN</Link>
                 )
             }
-            {
-                console.log(currentUser, currentUser===null)
-            }
                 <CartIcon/>
         </div>
         {
